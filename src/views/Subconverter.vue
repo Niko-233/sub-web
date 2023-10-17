@@ -36,7 +36,7 @@
                     style="width: 100%"
                     v-model="form.customBackend"
                     :fetch-suggestions="backendSearch"
-                    placeholder="动动小手，（建议）自行搭建后端服务。例：https://subconverter.h2o-2.org/sub?"
+                    placeholder="动动小手，（建议）自行搭建后端服务。例：https://subconverter.h2o-2.org/sub"
                   >
                     <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                   </el-autocomplete>
@@ -296,7 +296,26 @@ export default {
           ClashR: "clashr",
           Surge2: "surge&ver=2",
         },
-        backendOptions: [{ value: "https://subconverter.h2o-2.org/sub?" }],
+        customBackend: {
+         "H2O2": "https://subconverter.h2o-2.org",
+          "肥羊增强型后端【vless+hysteria】": "https://api.v1.mk",
+          "肥羊备用后端【vless+hysteria】": "https://sub.d1.mk",
+          "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
+          nameless13提供: "https://www.nameless13.com",
+          subconverter作者提供: "https://sub.xeton.dev",
+          "sub-web作者提供": "https://api.wcc.best",
+          "sub作者&lhie1提供": "https://api.dler.io",
+        },
+        backendOptions: [
+          {value: "https://subconverter.h2o-2.org"},
+          {value: "https://api.v1.mk"},
+          {value: "https://sub.d1.mk"},
+          {value: "https://api.tsutsu.one"},
+          {value: "https://www.nameless13.com"},
+          {value: "https://sub.xeton.dev"},
+          {value: "https://api.wcc.best"},
+          {value: "https://api.dler.io"},
+        ],
         remoteConfig: [
           {
             label: "ACL4SSR",
